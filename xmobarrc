@@ -1,0 +1,24 @@
+Config { font =              "-*-terminus-*-*-normal--12-120-72-72-c-60-*-*"
+	, bgColor =          "#170f0d"
+	, fgColor =          "#746c48"
+	, borderColor =      "#746c48"
+	, border =           NoBorder --BottomBM 1
+	, position =         Top
+	, allDesktops =      True
+	, hideOnStart =      False
+	, overrideRedirect = True
+	, persistent =       True
+	, lowerOnStart =     True
+	, commands = [ Run Weather "KHOU" ["-t","Houston: <tempF> °F (<skyCondition>)","-L","32","-H","80","--normal","#70a16c","--high","#af652f","--low","#7b854e"] 36000
+		, Run Network "wlp3s0" ["-t","<txbar> <tx> KB/s up <fc=#af652f>//</fc> <rxbar> <rx> KB/s down","-L","0","-H","32","--normal","#70a16c","--high","#af652f"] 10
+		, Run Cpu ["-L","3","-H","50","--normal","#746c48","--high","#af652f"] 10
+		, Run Memory ["-t","Mem: <usedratio>%"] 10
+		, Run Com "uname" ["-s","-r"] "" 36000
+		, Run Date "%a %b %d %Y %I:%M %p (%S)" "date" 10
+		, Run BatteryP ["BAT0"] ["-t", "Bat: <left>%","-L","15","-H","90","--high","#7b854e","--low","#af652f"] 600
+		, Run UnsafeStdinReader
+		]
+	, sepChar = "%"
+	, alignSep = "}{"
+	, template = "%UnsafeStdinReader% }{ %battery% <fc=#af652f>|</fc> %cpu% <fc=#af652f>|</fc> %memory% <fc=#af652f>|</fc> %wlp3s0% <fc=#af652f>|</fc> <fc=#e4dc8c>%date%</fc> <fc=#af652f>|</fc> %KHOU% <fc=#af652f>|</fc> %uname%"
+	}
