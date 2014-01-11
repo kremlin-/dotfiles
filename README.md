@@ -10,11 +10,13 @@ you need (obviously) prepend some files with a period for them to work. i omitte
 i use these programs:
 * xmonad
 * xmobar
+* xmodmap
 * xbindkeys
 * urxvt/urxvtd/urxvtc
 * NetworkManager
 * feh
 * nano (don't hate)
+* emacs
 * some others i'm forgetting
 
 what's included
@@ -27,6 +29,7 @@ what's included
 * nano syntax highlighting rc files
 * "bespoke" gtk-2 theme i (sort of) made
 * bound keys with xbindkeys
+* anti-emacs pinky
 * helpful scripts
 * wallpapers that aren't mine
 * hopefully none of my passwords or personal information
