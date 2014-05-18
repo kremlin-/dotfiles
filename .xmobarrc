@@ -1,0 +1,22 @@
+Config { font =              "-*-terminus-*-*-normal--12-120-72-72-c-60-*-*"
+	, bgColor =          "#170f0d"
+	, fgColor =          "#746c48"
+	, borderColor =      "#746c48"
+	, border =           NoBorder --BottomBM 1
+	, position =         Top
+	, allDesktops =      True
+	, pickBroadest =     False
+	, hideOnStart =      False
+	, overrideRedirect = True
+	, persistent =       True
+	, lowerOnStart =     True
+	, sepChar = "%"
+	, alignSep = "}{"
+	, template = "%UnsafeStdinReader% }{ %battery% <fc=#af652f>|</fc> <fc=#e4dc8c>%date%</fc> <fc=#af652f>|</fc> %KHOU% <fc=#af652f>|</fc> %uname%"
+	, commands = [ Run Weather "KHOU" ["-t","Houston: <tempF> F (<skyCondition>)","-L","32","-H","80","--normal","#70a16c","--high","#af652f","--low","#7b854e"] 36000
+		, Run Com "uname" ["-s","-r"] "" 36000
+		, Run Date "%a %b %d %Y %I:%M %p (%S)" "date" 10
+		, Run Battery ["-t", "Bat: <left>","-L","15","-H","90","--high","#7b854e","--low","#af652f"] 600
+		, Run UnsafeStdinReader
+	]
+}
