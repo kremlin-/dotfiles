@@ -11,29 +11,22 @@ i use these programs:
 * xmonad
 * xmobar
 * xmodmap
-* xbindkeys
+* ~~xbindkeys~~
 * urxvt/urxvtd/urxvtc
-* NetworkManager
+* ~~NetworkManager~~
 * feh
-* nano (don't hate)
-* emacs
-* some others i'm forgetting
+* ~~nano~~
+* vim
 
 what's included
 --------
 * my xresources (terminal colors/schema/extensions)
 * xmonad config
 * xmobar config
-* xinit sequence
 * bash config/aliases/terminal prompts/etc
-* nano syntax highlighting rc files
 * "bespoke" gtk-2 theme i (sort of) made
-* bound keys with xbindkeys
-* anti-emacs pinky
-* helpful scripts
 * wallpapers that aren't mine
-* hopefully none of my passwords or personal information
-
+* vim config
 
 avec l'amour toujours,
 kremlin
