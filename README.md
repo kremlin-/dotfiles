@@ -3,11 +3,8 @@ dotfiles
 
 m'dotfiles
 
-important
+i use these
 --------
-you need (obviously) prepend some files with a period for them to work. i omitted this detail so they would show up properly on github.
-
-i use these programs:
 * xmonad
 * xmobar
 * xmodmap
