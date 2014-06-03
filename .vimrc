@@ -7,5 +7,8 @@ set showmatch
 set cindent
 set nu
 set nocp
+
+cmap w!! w !sudo tee > /dev/null %
+
 syntax on
 
